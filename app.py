@@ -43,12 +43,12 @@ def recommend_games(game_input,metadata_selected,gower_dist_matrix, n=5):
 def main():
     st.title('Streamlit App')
 
-    user_id = st.text_input('Ingrese el ID del usuario:', '')
+    user_id = st.text_input('Ingrese el el nombre del juego:', '')
 
     if st.button('Predecir'):
         if user_id:
-            user_id = int(user_id)
-            recomended = recommend_games(user_id)
+            game_imput = user_id
+            recomended = recommend_games(game_imput)
 
             # Formatear las predicciones
             recomend_df = pd.DataFrame(recomended, columns=['Game', 'Price'])  
