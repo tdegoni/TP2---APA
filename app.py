@@ -29,7 +29,7 @@ def recommend_games(game_input,metadata_selected,gower_dist_matrix, n=5):
 
             # Retornar los nombres de los juegos utilizando el DataFrame meta
             game_indices = [i[0] for i in similarity_score]
-            return metadata_selected[['name', 'price']].iloc[game_indices]
+            return metadata_selected[['name']].iloc[game_indices]
 
         else:
             print("Realizando una busqueda más amplia. Espere por favor.No se encontro su juego")
