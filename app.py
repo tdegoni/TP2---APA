@@ -51,13 +51,13 @@ def main():
             recomended = recommend_games(game_imput,metadata,gower,20)
 
             # Formatear las predicciones
-            recomend_df = pd.DataFrame(recomended, columns=['Game', 'Price'])  
+            recomend_df = pd.DataFrame(recomended, columnnames=['Game', 'Price'])  
 
             st.subheader('Recomendaciones:')
             st.write(recomend_df)
 
         else:
-            st.warning('Ingrese un ID de usuario válido.')
+            st.warning('Ingrese un juego válido.')
 
 if __name__ == '__main__':
     main()
