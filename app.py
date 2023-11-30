@@ -51,7 +51,7 @@ def main():
             recomended = recommend_games(game_imput,metadata,gower,20)  
 
             st.subheader('Recomendaciones:')
-            st.write(recomended)
+            st.write(recomended[0],recomended[1])
 
         else:
             st.warning('Ingrese un juego válido.')
