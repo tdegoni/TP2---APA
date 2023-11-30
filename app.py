@@ -48,13 +48,10 @@ def main():
     if st.button('Predecir'):
         if user_imput:
             game_imput = str(user_imput)
-            recomended = recommend_games(game_imput,metadata,gower,20)
-
-            # Formatear las predicciones
-            recomend_df = pd.DataFrame(recomended, columnnames=['Game', 'Price'])  
+            recomended = recommend_games(game_imput,metadata,gower,20)  
 
             st.subheader('Recomendaciones:')
-            st.write(recomend_df)
+            st.write(recomended)
 
         else:
             st.warning('Ingrese un juego válido.')
