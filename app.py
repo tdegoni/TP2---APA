@@ -48,7 +48,7 @@ def main():
     if st.button('Predecir'):
         if user_imput:
             game_imput = str(user_imput)
-            recomended = recommend_games(game_imput,20)
+            recomended = recommend_games(game_imput,metadata,gower,20)
 
             # Formatear las predicciones
             recomend_df = pd.DataFrame(recomended, columns=['Game', 'Price'])  
